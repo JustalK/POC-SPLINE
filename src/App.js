@@ -1,12 +1,12 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Pocs from "./components/Pocs";
 import Poc1 from "./components/Pocs/Poc1";
 
 function App() {
   return (
     <Router>
-      <div>
+      <>
         <div className="navigation">
           <nav>
             <ul>
@@ -27,7 +27,7 @@ function App() {
             <Route path="/" element={<Poc1 />} />
           </Routes>
         </div>
-      </div>
+      </>
     </Router>
   );
 }
