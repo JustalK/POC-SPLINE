@@ -1,5 +1,9 @@
 # POC-SPLINE
 
+![./documentations/2.jpg](./documentations/2.jpg)
+
+![./documentations/3.jpg](./documentations/3.jpg)
+
 Spline is an online platform for creating 3D scene that we can export on our website. Until now, I have always been in love with Three.js and React-Three-Fiber. However, this tool has changed drastically how I planned to do my 3D work. Instead of creating mesh and adding the whole logic by code, Spline provide a very good software for manipulating the scene such as my favorite 3D application Blender.
 
 In this poc, I have just tried to create a scene and adding it in a react website. I am using **React** and the **spline** package. On top of that, I am also using the **@splinetool/react-spline** for linking both tool together
