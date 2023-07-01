@@ -1,28 +1,32 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Pocs from "./components/Pocs";
 import Poc1 from "./components/Pocs/Poc1";
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/poc1">Poc1</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Routes>
-          <Route path="/poc1" element={<Poc1 />} />
-          <Route path="/" element={<Poc1 />} />
-        </Routes>
+        <div className="navigation">
+          <nav>
+            <ul>
+              {Object.keys(Pocs).map((e, index) => (
+                <li key={index}>
+                  <a href={`/${index + 1}`}>{e}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+        <div className="content">
+          <Routes>
+            {Object.keys(Pocs).map((e, index) => {
+              const Type = Pocs[e];
+              return <Route path={`/${index + 1}`} element={<Type />} />;
+            })}
+            <Route path="/" element={<Poc1 />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
