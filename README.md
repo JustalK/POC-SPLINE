@@ -22,6 +22,7 @@ I explain with all the details how I build the project and my way of working.
 - **Poc 1:** Test to include a spline in a react component
 - **Poc 2:** Test to turn the spline into a background
 - **Poc 3:**: Test with controller and animation
+- **Poc 4:**: Playing with shape for reproducing the effect of my portfolio
 
 ## Development
 

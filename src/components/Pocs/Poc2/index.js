@@ -1,18 +1,12 @@
-import Spline from "@splinetool/react-spline";
-import React, { Suspense } from "react";
+import Default from "../Default";
 import "./style.css";
 
-function Poc2() {
+function Poc() {
   return (
-    <div>
-      <div className="background">
-        <Suspense fallback={<div>Loading...</div>}>
-          <Spline scene="https://prod.spline.design/IN9PUsuOpxoZgPWh/scene.splinecode" />
-        </Suspense>
-        <span className="title">Titre 1</span>
-      </div>
-    </div>
+    <Default url="https://prod.spline.design/IN9PUsuOpxoZgPWh/scene.splinecode">
+      <span className="title">Titre 1</span>
+    </Default>
   );
 }
 
-export default Poc2;
+export default Poc;
